@@ -29,7 +29,7 @@ def GenerateWords(alphabet):
     triple_symbol = 2
     for remaining_symbols in PlacementWithRepetitions(alphabet, 3):  # остальные
         # все перестановки символов
-        for permutation in GeneratePermutations([triple_symbol] * 3 + list(remaining_symbols), 3):
+        for permutation in GeneratePermutations([triple_symbol] * 3 + list(remaining_symbols), 6):
             words.append(''.join(str(symbol) for symbol in permutation))
     return words
 
@@ -37,5 +37,5 @@ def GenerateWords(alphabet):
 alphabet = [1, 2, 3, 4, 5, 6, 7, 8]
 words = GenerateWords(alphabet)
 
-print(f"Количество слов: {len(words)//6}") # делим на 6, тк 222111 итп считается 6 раз (222111, 222111 итд считаются как разные слова)
-print(words) # печатаем все возможные оставшиеся тройки элементов слова, тк три 2 зафиксированы
+print(f"Количество слов: {len(words)//36}") # делим на 36, тк 222111 итп считается 6 раз и 222, 111 итп считаются 6 раз (222111, 222111 итд считаются как разные слова)
+print(words)
