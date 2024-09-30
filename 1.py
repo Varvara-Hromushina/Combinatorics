@@ -10,9 +10,9 @@ def PlacementWithRepetitions(elements, length):
 
 
 elements = []
-print("Введите количество элементов алфавита: ")
+print("Введите количество элементов множества: ")
 n = int(input())
-print("Введите элементы алфавита: ")
+print("Введите элементы множества: ")
 i = 0
 while (i != n):
     elem = input()
